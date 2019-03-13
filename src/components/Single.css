@@ -1,0 +1,192 @@
+.single-photo {
+    width: 80%;
+    margin: 0 auto 40px;
+
+}
+
+.single-photo .grid-figure {
+    margin-bottom: 0;
+}
+
+.single-photo .grid-figure .grid-photo-wrap {
+    width: 100%;
+}
+
+.single-photo .comments {
+    padding: 48px 0 32px;
+
+}
+
+.single-photo .comment {
+    border: 0;
+}
+
+.single-photo .comment-form {
+    margin-top: 16px;
+}
+
+
+.comment p {
+    font-size: 1.2rem;
+    margin-top: 0;
+    margin-bottom: 12px;
+}
+
+.comment strong {
+    color: #125688;
+    margin-right: 5px;
+}
+
+.comment:hover .remove-comment {
+    opacity: 1;
+}
+
+.comment-form input,
+.comment-form textarea {
+    width: 100%;
+    border: 0;
+    font-size: 1.3rem;
+    padding: 1rem 0;
+    border-bottom: 1px solid #d3d3d3;
+    outline: none;
+    resize: vertical;
+}
+
+.remove-comment {
+    background: none;
+    border: 0;
+    line-height: 1;
+    font-size: 1rem;
+    display: inline-block;
+    vertical-align: top;
+    opacity: 0;
+}
+
+.remove-comment:hover {
+    color: #f00;
+}
+
+.likes-heart {
+    background: url("http://f.cl.ly/items/3Y373q2Q3J3Y1j203n0m/Bitmap-3.png") center no-repeat;
+    background-size: contain;
+    font-size: 2rem;
+    padding: 1rem;
+    position: absolute;
+    color: #00f;
+    left: 50%;
+    top: 50%;
+    pointer-events: none;
+}
+
+/*  
+    Buttons  
+  */
+.control-buttons {
+    margin-left: 32px;
+    margin-right: 32px;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+button,
+.button {
+    border: 2px solid #f2f2f2;
+    background: none;
+    flex-basis: 48%;
+    display: inline-block;
+    line-height: 2;
+    text-decoration: none;
+    padding: 5px;
+    text-align: center;
+    font-size: 15px;
+    color: #000;
+    transition: all 0.2s;
+    box-sizing: padding-box;
+}
+
+button:hover,
+a.button:hover {
+    border-color: #125688;
+    cursor: pointer;
+}
+
+button:hover,
+.button:hover,
+button:focus,
+.button:focus {
+    outline: 0;
+}
+
+/*
+    Cowboy style speech bubble - you should probably use an SVG for this if you are doing more icons.
+  */
+.speech-bubble {
+    width: 1rem;
+    height: 0.8rem;
+    background: #000;
+    display: inline-block;
+    border-radius: 50%;
+    position: relative;
+    margin-right: 5px;
+}
+
+.speech-bubble:after {
+    display: inline-block;
+    position: absolute;
+    content: '';
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 0.8rem 0.9rem 0;
+    border-color: transparent #000 transparent transparent;
+    top: 30%;
+    left: 0px;
+}
+
+.likes-heart>* {
+    color: #000
+}
+
+.likes-heart {
+    opacity: 0;
+    /* transition: all 0.5s; */
+    transform: translateX(-50%) translateY(-50%) scale(3);
+    display: block;
+}
+
+.likes-heart.like-enter {
+    transition: all 0.8s;
+    transform: translateX(-50%) translateY(-50%) scale(1);
+    opacity: 1;
+}
+
+.likes-heart.like-enter.like-enter-active {
+    transform: translateX(-50%) translateY(-50%) scale(3);
+}
+
+.likes-heart .like-leave-active {
+    display: none;
+}
+
+
+@media(min-width: 1000px) {
+    .single-photo {
+        width: 80%;
+        display: grid;
+        grid-template-columns: minmax(400px, 1fr) 1fr;
+        grid-column-gap: 32px;
+        align-items: start;
+    }
+
+    .single-photo .comments {
+        padding: 0;
+    }
+}
+
+@media(min-width: 1200px) {
+    .single-photo {
+        width: 72%;
+        grid-column-gap: 40px;
+    }
+}

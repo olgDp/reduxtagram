@@ -1,0 +1,39 @@
+.grid-figure span {
+    color: #125688;
+}
+
+.grid-figure {
+    margin-bottom: 48px;
+    padding-bottom: 16px;
+    border: 1px solid #d3d3d3;
+    background: #fff;
+    box-shadow: 0 0 0 5px rgba(0, 0, 0, 0.03);
+    position: relative;
+}
+
+.grid-figure>figcaption,
+.single-photo>figcaption {
+    margin-top: 16px;
+    margin-bottom: 16px;
+    padding-left: 32px;
+    padding-right: 32px;
+    text-align: center;
+}
+
+.grid-photo-wrap {
+    position: relative;
+}
+
+.grid-photo {
+    object-fit: cover;
+    display: block;
+    height: 100%;
+    width: 100%;
+}
+
+
+@media(min-width: 768px) {
+    .grid-figure {
+        margin-bottom: 0px;
+    }
+}
